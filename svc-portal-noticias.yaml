@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: svc-pod-loadbalancer-1
+  name: svc-portal-noticias
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 80
+      #targetPort: 80
       nodePort: 30000
   selector:
-    app: primeiro-pod
+    app: portal-noticias
