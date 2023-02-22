@@ -10,3 +10,8 @@ spec:
       image: aluracursos/mysql-db:1
       ports:
         - containerPort: 3306
+      #corrigindo fallBackError  
+      name: mysql
+      env:
+        - name: "MYSQL_ROOT_PASSWORD"
+          value: "q1w2e3r4"
